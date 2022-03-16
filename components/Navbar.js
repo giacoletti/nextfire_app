@@ -15,7 +15,7 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {username && (
+        {username ? (
           <>
             <li className="push-left">
               <Link href="/admin">
@@ -28,9 +28,7 @@ export default function Navbar() {
               </Link>
             </li>
           </>
-        )}
-
-        {!username && (
+        ) : (
           <li>
             <Link href="/enter">
               <button data-cy="login-button" className="btn-blue">
