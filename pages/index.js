@@ -1,5 +1,5 @@
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -11,6 +11,13 @@ export default function Home() {
       >
         <a data-cy="johnsmith21-link">John's profile</a>
       </Link>
+
+      <button
+        data-cy="toast-button"
+        onClick={() => toast.success("Hello toast!")}
+      >
+        Toast Me
+      </button>
     </div>
   );
 }
