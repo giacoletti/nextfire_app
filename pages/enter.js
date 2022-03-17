@@ -31,7 +31,11 @@ function SignInButton() {
   };
 
   return (
-    <button className="btn-google" onClick={signInWithGoogle}>
+    <button
+      data-cy="signin-button"
+      className="btn-google"
+      onClick={signInWithGoogle}
+    >
       <img src={"/google.png"} /> Sign in with Google
     </button>
   );
