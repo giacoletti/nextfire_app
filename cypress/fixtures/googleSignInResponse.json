@@ -1,0 +1,21 @@
+{
+  "federatedId": "https://accounts.google.com/118247449599982250815",
+  "providerId": "google.com",
+  "email": "giacoletti92@gmail.com",
+  "emailVerified": true,
+  "firstName": "Giovanni",
+  "fullName": "Giovanni Iacoletti",
+  "lastName": "Iacoletti",
+  "photoUrl": "https://lh3.googleusercontent.com/a-/AOh14GhfijH59atYTRTdKmRVtf9h7TBVPF0PWHEGqM9Y=s96-c",
+  "localId": "tNvviOZXhiYaGKt65sSiAPOtcub2",
+  "displayName": "Giovanni Iacoletti",
+  "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiR2lvdmFubmkgSWFjb2xldHRpIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdoZmlqSDU5YXRZVFJUZEttUlZ0ZjloN1RCVlBGMFBXSEVHcU05WT1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9uZXh0ZmlyZS1hcHAtMTZjMzAiLCJhdWQiOiJuZXh0ZmlyZS1hcHAtMTZjMzAiLCJhdXRoX3RpbWUiOjE2NDc4OTY2NzgsInVzZXJfaWQiOiJ0TnZ2aU9aWGhpWWFHS3Q2NXNTaUFQT3RjdWIyIiwic3ViIjoidE52dmlPWlhoaVlhR0t0NjVzU2lBUE90Y3ViMiIsImlhdCI6MTY0Nzg5NjY3OCwiZXhwIjoxNjQ3OTAwMjc4LCJlbWFpbCI6ImdpYWNvbGV0dGk5MkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExODI0NzQ0OTU5OTk4MjI1MDgxNSJdLCJlbWFpbCI6WyJnaWFjb2xldHRpOTJAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.FShbWmcoIW7UfIKIaWshVZPpa6XKrfzcYRzR6WXKaaPrTKHtX6MpgdDAiVodVb7CfKDu58fyXSbnq0qCEznI4-MAgKey3WohE5EsA0mWiwhLOw7GrNymCcgI-uzEsruTMvwwzBdJp7uww9ZNZBDehBRzhRvlAObleoTulmMKpglr20TuYSjtogUQwtNLjAiZ1-hBfs5q-ONKdCCbFitet2DZeF6VjgzGY5Hv8eJ-ztNvPPB7IVhr7StGjwlQhBoAnmooIwfjMC5ZajMbAD1Ue6WI5-ty8Q2KzgycR1AvR_4YBmGefQwLfRftO1k0NCUbh_aNS-yZPS201nrn6vxL0A",
+  "context": "",
+  "oauthAccessToken": "ya29.A0ARrdaM8EIuGmb-ljSu8IK-MxrVfP39YXifuOq1stenHn5eOkOa94uq430eClo6g4y59houBlThu3SscApBIahErp9T36DinuOZ4z5ucO8JMHzzx1BNiMnbLlCf9XtqqaINXFi_1MoKDG8_-8HlN62WDuetZj2w",
+  "oauthExpireIn": 3599,
+  "refreshToken": "AIwUaOmFJljx6bdU_hVebZxxhUzdhJiOdQ6JerDYpRz5UQEeQ_3V0WZ3jV9zXf4FZqdu73Nkg5bCZqrsh1JB2xKR9PXpAU7Nbvfbqika2ucXLoFMSNGMtmYG4G7tGbvOk3YpyQ8hSeNRZIbk5LrhQJlMCFkdbCAR_j0X-dcKmVR9-mK61L3jKdzC9Z33eqKNbryEh-ER4tMttPWCP33Usm0W8oS_dXFT_EikFu7x3Puv79pgquTaojopyf4e6vslE8n2E0peF-yRP2j_V_Y9_oeG3VUOSNLR4RfMld2jD4NR9GufWa8F9xvxVqw_4LRfkjAOiwdRjzNiDGyeZqloVNuMhiHnI5BmWPRgQlsHC469SgJqrz4wRJBXxxDoHBkszkhQE5LaZbCRw1dz40kCPBPrtmwcvOZBtmu4CIWQ8vOUJC2zbdsIH5id50veiXq-2_GDmZiFK0hx",
+  "expiresIn": "3600",
+  "oauthIdToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjcyOTE4OTQ1MGQ0OTAyODU3MDQyNTI2NmYwM2U3MzdmNDVhZjI5MzIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiMTU4MzQ5MTcwOTE0LWtrZzl0ZXIzbTltNWhlbHYxaHVldXY2am5xcmU1ODVoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTU4MzQ5MTcwOTE0LWtrZzl0ZXIzbTltNWhlbHYxaHVldXY2am5xcmU1ODVoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE4MjQ3NDQ5NTk5OTgyMjUwODE1IiwiZW1haWwiOiJnaWFjb2xldHRpOTJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiItajNyWE1XY0s3N2Fzem9mLVdLRmJBIiwiaWF0IjoxNjQ3ODk2Njc4LCJleHAiOjE2NDc5MDAyNzh9.If6EvR4obWRcflCVyBfiA_q2qdZY16CKuZZSGcx2gTqcfQRZfeteaybWfwn_P55fJZMprujYi75pN9qWRRzxLMsrFPgEknjY5JjzaY5-QUrpSp-Qe4azVAB090Xg_T9K0qLTSIwPakUw98Iz8eTqFV4ZN-muz_ictajvRttbrjPeE3ONLpwSAB_9APNWlE4lwSuGiob_Akzu9tdRfjPjvlpDxahsdXZBoBL_arUdm3TRt6Q9M1lTXAalVpMIYBH9dm__0pSrnEgp1AMlgijyfnF6TrCMVZMVgsBliN4k2A9XOvBBolZKoof85cE3NstLasRgVRKiHiP9PxuWfy0SDQ",
+  "rawUserInfo": "{\"name\":\"Giovanni Iacoletti\",\"granted_scopes\":\"openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile\",\"id\":\"118247449599982250815\",\"verified_email\":true,\"given_name\":\"Giovanni\",\"locale\":\"en-GB\",\"family_name\":\"Iacoletti\",\"email\":\"giacoletti92@gmail.com\",\"picture\":\"https://lh3.googleusercontent.com/a-/AOh14GhfijH59atYTRTdKmRVtf9h7TBVPF0PWHEGqM9Y=s96-c\"}",
+  "kind": "identitytoolkit#VerifyAssertionResponse"
+}
