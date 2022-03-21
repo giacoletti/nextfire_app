@@ -1,29 +1,8 @@
 describe("A visitor, after sign in, can choose an username", () => {
   before(() => {
-    cy.intercept(
-      "GET",
-      "https://www.googleapis.com/identitytoolkit/v3/relyingparty/getProjectConfig?key=**",
-      {
-        fixture: "firebaseAuthResponse"
-      }
-    );
-    cy.intercept(
-      "GET",
-      "https://identitytoolkit.googleapis.com/v1/projects?key=**",
-      {
-        fixture: "firebaseAuthResponse"
-      }
-    );
-    cy.intercept(
-      "GET",
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithIdp?key=**",
-      {
-        fixture: "googleSignInResponse"
-      }
-    );
     cy.visit("/");
     cy.get("[data-cy=login-button]").click();
-    cy.get("[data-cy=signin-button]").click();
+    cy.login();
   });
 
   it("is expected to see 'Choose Username' header", () => {
@@ -39,5 +18,9 @@ describe("A visitor, after sign in, can choose an username", () => {
 
   it("is expected to see 'Choose' button", () => {
     cy.get("[data-cy=submit-btn]").should("contain.text", "Choose");
+  });
+
+  after(() => {
+    cy.logout();
   });
 });

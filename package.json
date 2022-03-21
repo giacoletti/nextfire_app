@@ -21,8 +21,10 @@
   },
   "devDependencies": {
     "cypress": "^9.5.1",
+    "cypress-firebase": "^2.2.1",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "firebase-admin": "^10.0.2",
     "start-server-and-test": "^1.14.0"
   }
 }

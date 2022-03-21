@@ -113,9 +113,10 @@ function UsernameForm() {
   return (
     !username && (
       <section>
-        <h3>Choose Username</h3>
+        <h3 data-cy="choose-username-header">Choose Username</h3>
         <form onSubmit={onSubmit}>
           <input
+            data-cy="username-input"
             name="username"
             placeholder="username"
             value={formValue}
@@ -128,7 +129,12 @@ function UsernameForm() {
             loading={loading}
           />
 
-          <button type="submit" className="btn-green" disabled={!isValid}>
+          <button
+            data-cy="submit-btn"
+            type="submit"
+            className="btn-green"
+            disabled={!isValid}
+          >
             Choose
           </button>
 
