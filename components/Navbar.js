@@ -29,7 +29,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <img src={user?.photoURL} />
+                <img data-cy="navbar-avatar" src={user?.photoURL} />
               </Link>
             </li>
           </>
