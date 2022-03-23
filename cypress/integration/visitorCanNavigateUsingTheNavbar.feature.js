@@ -8,8 +8,8 @@ describe("A visitor can navigate to the /enter view by clicking the Log in butto
     cy.url().should("contain", "/enter");
   });
 
-  it("is expected to see 'Sign Up' header", () => {
-    cy.get("[data-cy=signup-header]").should("contain.text", "Sign Up");
+  it("is expected to see 'Sign in with Google' button", () => {
+    cy.get("[data-cy=signin-button]").should("contain.text", "Sign in with Google");
   });
 
   describe("can navigate back to the home view", () => {
