@@ -3,18 +3,18 @@ import Link from "next/link";
 export default function PostFeed({ posts, admin }) {
   console.log(posts);
   return posts
-    ? posts.map((post) => (
-        <PostItem post={post} key={post.slug} admin={admin} />
+    ? posts.map((post, index) => (
+        <PostItem post={post} key={post.slug} admin={admin} index={index} />
       ))
     : null;
 }
 
-function PostItem({ post, admin = false }) {
+function PostItem({ post, admin = false, index }) {
   const wordCount = post?.content.trim().split(/\s+/g).length;
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
   return (
-    <div className="card">
+    <div data-cy={`post-card-${index}`} className="card">
       <Link href={`/${post.username}`}>
         <a>
           <strong data-cy="post-author">By @{post.username}</strong>
