@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 // UI component for main post content
 export default function PostContent({ post }) {
@@ -11,13 +12,15 @@ export default function PostContent({ post }) {
     <div className="card">
       <h1 data-cy="post-header">{post?.title}</h1>
       <span data-cy="post-author-created" className="text-sm">
-        Written by{' '}
+        Written by{" "}
         <Link href={`/${post.username}`}>
           <a className="text-info">@{post.username}</a>
-        </Link>
-        {' '}on {createdAt.toISOString()}
+        </Link>{" "}
+        on {createdAt.toISOString()}
       </span>
-      <p data-cy="post-content">{post?.content}</p>
+      <span data-cy="post-content">
+        <ReactMarkdown>{post?.content}</ReactMarkdown>
+      </span>
     </div>
   );
 }
