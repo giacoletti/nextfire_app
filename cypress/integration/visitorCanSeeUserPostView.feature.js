@@ -15,7 +15,7 @@ describe("A visitor can see a full post by clicking on its title", () => {
   it("is expected to see post author and creation date", () => {
     cy.get("[data-cy=post-author-created]").should(
       "contain.text",
-      "Written by @johnsmith92 on 2022-03-22"
+      "Written by @johnsmith92 on 2022-03-22T18:00:00.000Z"
     );
   });
 
