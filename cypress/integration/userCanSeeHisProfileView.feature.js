@@ -27,15 +27,15 @@ describe("A user who's signed in, can see his profile view", () => {
 
   describe("can see his own post feed", () => {
     it("is expected to see post author", () => {
-      cy.get("[data-cy=post-author]").should("contain.text", "By @johnsmith92");
+      cy.get("[data-cy=post-author-0]").should("contain.text", "By @johnsmith92");
     });
 
     it("is expected to see post title", () => {
-      cy.get("[data-cy=post-title]").should("contain.text", "My first post!");
+      cy.get("[data-cy=post-title-0]").should("contain.text", "My first post!");
     });
 
     it("is expected to see post footer", () => {
-      cy.get("[data-cy=post-footer]").should(
+      cy.get("[data-cy=post-footer-0]").should(
         "contain.text",
         "11 words. 1 min read❤️ 0 Hearts"
       );

@@ -14,20 +14,20 @@ function PostItem({ post, admin = false, index }) {
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
   return (
-    <div data-cy={`post-card-${index}`} className="card">
+    <div className="card">
       <Link href={`/${post.username}`}>
         <a>
-          <strong data-cy="post-author">By @{post.username}</strong>
+          <strong data-cy={`post-author-${index}`}>By @{post.username}</strong>
         </a>
       </Link>
 
       <Link href={`/${post.username}/${post.slug}`}>
-        <h2 data-cy="post-title">
+        <h2 data-cy={`post-title-${index}`}>
           <a>{post.title}</a>
         </h2>
       </Link>
 
-      <footer data-cy="post-footer">
+      <footer data-cy={`post-footer-${index}`}>
         <span>
           {wordCount} words. {minutesToRead} min read
         </span>

@@ -19,17 +19,15 @@ describe("A visitor navigating the main url", () => {
 
   describe("can see posts feed", () => {
     it("is expected to see first post", () => {
-      cy.get("[data-cy=post-card-0]").within(() => {
-        cy.get("[data-cy=post-author]").should(
-          "contain.text",
-          "By @johnsmith92"
-        );
-        cy.get("[data-cy=post-title]").should("contain.text", "My first post!");
-        cy.get("[data-cy=post-footer]").should(
-          "contain.text",
-          "11 words. 1 min read❤️ 0 Hearts"
-        );
-      });
+      cy.get("[data-cy=post-author-0]").should(
+        "contain.text",
+        "By @johnsmith92"
+      );
+      cy.get("[data-cy=post-title-0]").should("contain.text", "My first post!");
+      cy.get("[data-cy=post-footer-0]").should(
+        "contain.text",
+        "11 words. 1 min read❤️ 0 Hearts"
+      );
     });
   });
 });
