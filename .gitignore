@@ -38,3 +38,6 @@ yarn-error.log*
 serviceAccount.json
 
 cypress.env.json
+
+#TypeScript
+tsconfig.tsbuildinfo
