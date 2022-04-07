@@ -1,5 +1,7 @@
+import { User } from "../types";
+
 // UI component for user profile
-export default function UserProfile({ user }) {
+export default function UserProfile({ user }: {user: User}) {
   console.log(user);
   return (
     <div className="box-center">

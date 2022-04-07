@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { Post } from "../types";
 
-export default function PostFeed({ posts, admin }) {
+export default function PostFeed({ posts, admin }: {posts: Post[], admin: boolean}) {
 
   return posts
     ? posts.map((post, index) => (
@@ -9,7 +10,7 @@ export default function PostFeed({ posts, admin }) {
     : null;
 }
 
-function PostItem({ post, admin = false, index }) {
+function PostItem({ post, admin = false, index }:{post: Post, admin: boolean, index: number}) {
   const wordCount = post?.content.trim().split(/\s+/g).length;
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
