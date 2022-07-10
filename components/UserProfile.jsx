@@ -5,13 +5,13 @@ export default function UserProfile({ user }) {
     <div className="box-center">
       <img
         data-cy="user-avatar"
-        src={user.photoURL}
+        src={user.photoURL || '/avatar.png'}
         className="card-img-center"
       />
       <p>
         <i data-cy="user-username">@{user.username}</i>
       </p>
-      <h1 data-cy="user-display-name">{user.displayName}</h1>
+      <h1 data-cy="user-display-name">{user.displayName || 'Anonymous User'}</h1>
     </div>
   );
 }
