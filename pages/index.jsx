@@ -53,11 +53,15 @@ export default function Home(props) {
       <PostFeed posts={posts} />
 
       {!loading && !postsEnd && (
-        <button onClick={getMorePosts}>Load more</button>
+        <button data-cy="load-more-posts" onClick={getMorePosts}>
+          Load more
+        </button>
       )}
       <Loader show={loading} />
 
-      {postsEnd && "You have reached the end!"}
+      {postsEnd && (
+        <div data-cy="end-of-feed-message">You have reached the end!</div>
+      )}
     </main>
   );
 }

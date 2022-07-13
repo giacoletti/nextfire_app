@@ -1,6 +1,5 @@
 // UI component for user profile
 export default function UserProfile({ user }) {
-  console.log(user);
   return (
     <div className="box-center">
       <img
