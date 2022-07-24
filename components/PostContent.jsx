@@ -18,9 +18,9 @@ export default function PostContent({ post }) {
         </Link>{" "}
         on {createdAt.toISOString()}
       </span>
-      <span data-cy="post-content">
+      <div data-cy="post-content">
         <ReactMarkdown>{post?.content}</ReactMarkdown>
-      </span>
+      </div>
     </div>
   );
 }

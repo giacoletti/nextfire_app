@@ -22,4 +22,8 @@ describe("A visitor can see a full post by clicking on its title", () => {
   it("is expected to see post content", () => {
     cy.get("[data-cy=post-content]").should("be.visible");
   });
+
+  it("is expected to see heart count", () => {
+    cy.get("[data-cy=post-heart-count]").should("contain.text", "0 🤍");
+  });
 });
