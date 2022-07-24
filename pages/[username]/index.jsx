@@ -7,6 +7,13 @@ export async function getServerSideProps({ query }) {
 
   const userDoc = await getUserWithUsername(username);
 
+  // If no user is found in firestore, render 404 page
+  if (!userDoc) {
+    return {
+      notFound: true
+    };
+  }
+
   // JSON serializable data
   let user = null,
     posts = null;
