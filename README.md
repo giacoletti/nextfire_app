@@ -18,24 +18,30 @@ Blog platform built with Next.js, React and Firebase.
 - [react-markdown](https://github.com/remarkjs/react-markdown)
 - [yarn](https://classic.yarnpkg.com/en/)
 
-## Getting Started
+## Available Scripts
 
-First, run the development server:
+In the project directory, you can run:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### `yarn dev`
 
+Run the development server.\
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### `yarn build`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Generates an optimized version of your application for production.\
+This output is generated inside the `.next` folder.
+
+### `yarn cypress`
+
+Runs the app with [Cypress](https://www.cypress.io/), the next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.
 
 ## Acknowledgements
 
 - [Fireship.io](https://fireship.io/)
+
+## Updates/Improvement plans
+
+(Work in progress...)
