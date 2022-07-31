@@ -112,6 +112,34 @@ describe("A visitor navigating /admin/:anything", () => {
       });
     });
 
+    describe("form validation", () => {
+      describe("by leaving the post content blank", () => {
+        before(() => {
+          cy.get("[data-cy=post-content]").clear();
+        });
+
+        it("is expected to see 'content is required' message", () => {
+          cy.get("[data-cy=error-message]").should(
+            "contain.text",
+            "content is required"
+          );
+        });
+      });
+
+      describe("by typing a short post content", () => {
+        before(() => {
+          cy.get("[data-cy=post-content]").type("test");
+        });
+
+        it("is expected to see 'content is too short' message", () => {
+          cy.get("[data-cy=error-message]").should(
+            "contain.text",
+            "content is too short"
+          );
+        });
+      });
+    });
+
     after(() => {
       cy.visit("/admin");
       cy.logout();
