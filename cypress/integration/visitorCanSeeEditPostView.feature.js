@@ -27,7 +27,7 @@ describe("A visitor navigating /admin/:anything", () => {
     });
 
     it("is expected to see post content", () => {
-      cy.get("[data-cy=post-content]").should("contain.text", "# hello world!");
+      cy.get("[data-cy=post-content]").should("be.visible");
     });
 
     it("is expected to see published checkbox", () => {
@@ -57,6 +57,7 @@ describe("A visitor navigating /admin/:anything", () => {
     });
 
     after(() => {
+      cy.visit("/admin");
       cy.logout();
     });
   });
