@@ -1,9 +1,26 @@
-describe("A visitor navigating /enter", () => {
+import { baseUrl } from "../../cypress.json";
+
+describe("A visitor navigating /admin", () => {
   before(() => {
     cy.visit("/admin");
   });
 
-  it("is expected to see 'Admin' header", () => {
-    cy.get("[data-cy=admin-header]").should("contain.text", "Admin");
+  describe("unauthenticated user", () => {
+    it("is expected to see 'You must be signed in' link", () => {
+      cy.get("[data-cy=sign-in-link]").should(
+        "contain.text",
+        "You must be signed in"
+      );
+    });
+
+    describe("can click the link to navigate to Sign In page", () => {
+      before(() => {
+        cy.get("[data-cy=sign-in-link]").click();
+      });
+
+      it("is expected to navigate to '/enter' page", () => {
+        cy.url().should("eq", baseUrl + '/enter');
+      });
+    });
   });
 });
