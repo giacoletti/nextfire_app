@@ -40,7 +40,7 @@ describe("A visitor navigating /admin", () => {
       );
     });
 
-    it("is expected to see latest user's post", () => {
+    it("is expected to see first created user's post", () => {
       cy.get("[data-cy=post-author-0]").should(
         "contain.text",
         "By @johnsmith92"
@@ -77,11 +77,11 @@ describe("A visitor navigating /admin", () => {
       });
 
       it("is expected to navigate to the edit post page", () => {
-        cy.url().should("eq", baseUrl + "/my-new-article");
+        cy.url().should("eq", baseUrl + "/admin/my-new-article");
       });
 
       it("is expected to see toast message", () => {
-        cy.get("[data-cy=toast-message]").should(
+        cy.get(".toast-message").should(
           "contain.text",
           "Post created!"
         );

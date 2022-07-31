@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import { useCollection } from "react-firebase-hooks/firestore";
 import kebabCase from "lodash.kebabcase";
+import toast from "react-hot-toast";
 
 export default function AdminPostsPage(props) {
   return (
@@ -51,6 +52,32 @@ function CreateNewPost() {
   // Create a new post in firestore
   const createPost = async (e) => {
     e.preventDefault();
+    const uid = auth.currentUser.uid;
+    const ref = firestore
+      .collection("users")
+      .doc(uid)
+      .collection("posts")
+      .doc(slug);
+
+    // Give all fields a default value
+    const data = {
+      title,
+      slug,
+      uid,
+      username,
+      published: false,
+      content: "# hello world!",
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+      heartCount: 0
+    };
+
+    await ref.set(data);
+
+    toast.success("Post created!", { className: "toast-message" });
+
+    // Imperative navigation after doc is set
+    router.push(`/admin/${slug}`);
   };
 
   return (
