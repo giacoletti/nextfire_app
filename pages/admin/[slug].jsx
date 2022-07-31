@@ -85,7 +85,7 @@ function PostForm({ defaultValues, postRef, preview }) {
   return (
     <form onSubmit={handleSubmit(updatePost)}>
       {preview && (
-        <div className="card">
+        <div data-cy="post-card" className="card">
           <ReactMarkdown>{watch("content")}</ReactMarkdown>
         </div>
       )}

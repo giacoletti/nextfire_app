@@ -56,6 +56,42 @@ describe("A visitor navigating /admin/:anything", () => {
       );
     });
 
+    describe("can click Preview button", () => {
+      before(() => {
+        cy.get("[data-cy=post-preview-btn]").click();
+      });
+
+      it("is expected to see post preview", () => {
+        cy.get("[data-cy=post-card]").should("contain.text", "hello world!");
+      });
+
+      it("is expected to see Edit button", () => {
+        cy.get("[data-cy=post-preview-btn]").should("contain.text", "Edit");
+      });
+
+      it("is expected to not see Save Changes button", () => {
+        cy.get("[data-cy=post-save-btn]").should("not.be.visible");
+      });
+
+      describe("can go back to edit mode", () => {
+        before(() => {
+          cy.get("[data-cy=post-preview-btn]").click();
+        });
+
+        it("is expected to see post content text area", () => {
+          cy.get("[data-cy=post-content]").should("be.visible");
+        });
+
+        it("is expected to see Preview button", () => {
+          cy.get("[data-cy=post-preview-btn]").should("contain.text", "Preview");
+        });
+
+        it("is expected to see Save Changes button", () => {
+          cy.get("[data-cy=post-save-btn]").should("be.visible");
+        });
+      });
+    });
+
     after(() => {
       cy.visit("/admin");
       cy.logout();

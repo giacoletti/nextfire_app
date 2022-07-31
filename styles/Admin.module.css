@@ -30,6 +30,7 @@
 }
 
 .controls textarea {
+  resize: none;
   height: 60vh;
   border: none;
   outline: none;
