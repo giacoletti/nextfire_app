@@ -45,7 +45,10 @@ describe("A visitor navigating /admin", () => {
         "contain.text",
         "By @johnsmith92"
       );
-      cy.get("[data-cy=post-title-0]").should("contain.text", "My second post!");
+      cy.get("[data-cy=post-title-0]").should(
+        "contain.text",
+        "My second post!"
+      );
       cy.get("[data-cy=post-footer-0]").should(
         "contain.text",
         "30 words. 1 min read❤️ 0 Hearts"
@@ -64,6 +67,28 @@ describe("A visitor navigating /admin", () => {
           "contain.text",
           "Create New Post"
         );
+      });
+    });
+
+    describe("can create a new post", () => {
+      before(() => {
+        cy.get("[data-cy=title-input]").type("My new article");
+        cy.get("[data-cy=create-post-btn]").click();
+      });
+
+      it("is expected to navigate to the edit post page", () => {
+        cy.url().should("eq", baseUrl + "/my-new-article");
+      });
+
+      it("is expected to see toast message", () => {
+        cy.get("[data-cy=toast-message]").should(
+          "contain.text",
+          "Post created!"
+        );
+      });
+
+      it("is expected to navigate to the edit post page", () => {
+        cy.get("[data-cy=edit-header]").should("contain.text", "Edit Post");
       });
     });
   });
