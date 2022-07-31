@@ -83,12 +83,32 @@ describe("A visitor navigating /admin/:anything", () => {
         });
 
         it("is expected to see Preview button", () => {
-          cy.get("[data-cy=post-preview-btn]").should("contain.text", "Preview");
+          cy.get("[data-cy=post-preview-btn]").should(
+            "contain.text",
+            "Preview"
+          );
         });
 
         it("is expected to see Save Changes button", () => {
           cy.get("[data-cy=post-save-btn]").should("be.visible");
         });
+      });
+    });
+
+    describe("can click Live view button", () => {
+      before(() => {
+        cy.get("[data-cy=post-live-view-btn]").click();
+      });
+
+      it("is expected to navigate to user post", () => {
+        cy.url().should("contain", "/johnsmith92/my-new-article");
+      });
+
+      it("is expected to see post header", () => {
+        cy.get("[data-cy=post-header]").should(
+          "contain.text",
+          "My new article"
+        );
       });
     });
 
