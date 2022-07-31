@@ -19,7 +19,51 @@ describe("A visitor navigating /admin", () => {
       });
 
       it("is expected to navigate to '/enter' page", () => {
-        cy.url().should("eq", baseUrl + '/enter');
+        cy.url().should("eq", baseUrl + "/enter");
+      });
+
+      after(() => {
+        cy.visit("/admin");
+      });
+    });
+  });
+
+  describe("authenticated user", () => {
+    before(() => {
+      cy.login();
+    });
+
+    it("is expected to see admin page header", () => {
+      cy.get("[data-cy=admin-header]").should(
+        "contain.text",
+        "Manage your Posts"
+      );
+    });
+
+    it("is expected to see first user's post", () => {
+      cy.get("[data-cy=post-author-0]").should(
+        "contain.text",
+        "By @johnsmith92"
+      );
+      cy.get("[data-cy=post-title-0]").should("contain.text", "My first post!");
+      cy.get("[data-cy=post-footer-0]").should(
+        "contain.text",
+        "11 words. 1 min read❤️ 0 Hearts"
+      );
+    });
+
+    it("is expected to see 'Create post' form", () => {
+      cy.get("[data-cy=create-post-form]").within(() => {
+        cy.get("[data-cy=title-input]").should(
+          "have.attr",
+          "placeholder",
+          "My Awesome Article!"
+        );
+        cy.get("[data-cy=slug-text]").should("contain.text", "Slug:");
+        cy.get("[data-cy=create-post-btn]").should(
+          "contain.text",
+          "Create New Post"
+        );
       });
     });
   });
