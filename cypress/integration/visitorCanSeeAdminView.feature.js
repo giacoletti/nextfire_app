@@ -91,5 +91,9 @@ describe("A visitor navigating /admin", () => {
         cy.get("[data-cy=edit-header]").should("contain.text", "Edit Post");
       });
     });
+
+    after(() => {
+      cy.logout();
+    });
   });
 });
