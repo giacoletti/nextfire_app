@@ -110,6 +110,10 @@ describe("A visitor navigating /admin/:anything", () => {
           "My new article"
         );
       });
+
+      after(() => {
+        cy.go('back');
+      });
     });
 
     describe("form validation", () => {
@@ -124,6 +128,10 @@ describe("A visitor navigating /admin/:anything", () => {
             "content is required"
           );
         });
+
+        it("is expected to have disabled Save Changes button", () => {
+          cy.get("[data-cy=post-save-btn]").should("be.disabled");
+        });
       });
 
       describe("by typing a short post content", () => {
@@ -136,6 +144,24 @@ describe("A visitor navigating /admin/:anything", () => {
             "contain.text",
             "content is too short"
           );
+        });
+
+        it("is expected to have disabled Save Changes button", () => {
+          cy.get("[data-cy=post-save-btn]").should("be.disabled");
+        });
+      });
+
+      describe("by typing more than 10 characters in post content", () => {
+        before(() => {
+          cy.get("[data-cy=post-content]").type("1234567890wow");
+        });
+
+        it("is expected to not see error messages", () => {
+          cy.get("[data-cy=error-message]").should("not.exist");
+        });
+
+        it("is expected to have enabled Save Changes button", () => {
+          cy.get("[data-cy=post-save-btn]").should("be.enabled");
         });
       });
     });

@@ -65,10 +65,12 @@ function PostManager() {
 }
 
 function PostForm({ defaultValues, postRef, preview }) {
-  const { register, handleSubmit, reset, watch } = useForm({
+  const { register, handleSubmit, reset, watch, formState } = useForm({
     defaultValues,
     mode: "onChange"
   });
+
+  const { isValid, isDirty, errors } = formState;
 
   const updatePost = async ({ content, published }) => {
     await postRef.update({
@@ -94,8 +96,18 @@ function PostForm({ defaultValues, postRef, preview }) {
         <textarea
           data-cy="post-content"
           name="content"
-          {...register("content")}
+          {...register("content", {
+            maxLength: { value: 20000, message: "content is too long" },
+            minLength: { value: 10, message: "content is too short" },
+            required: { value: true, message: "content is required" }
+          })}
         ></textarea>
+
+        {errors.content && (
+          <p data-cy="error-message" className="text-danger">
+            {errors.content.message}
+          </p>
+        )}
 
         <fieldset data-cy="post-published-checkbox">
           <input
@@ -106,7 +118,12 @@ function PostForm({ defaultValues, postRef, preview }) {
           <label>Published</label>
         </fieldset>
 
-        <button data-cy="post-save-btn" type="submit" className="btn-green">
+        <button
+          data-cy="post-save-btn"
+          type="submit"
+          className="btn-green"
+          disabled={!isDirty || !isValid}
+        >
           Save Changes
         </button>
       </div>
