@@ -14,9 +14,20 @@ Blog platform built with Next.js, React and Firebase.
 - [Firebase](https://firebase.google.com/) (Authentication, Firestore Database)
 - [React Firebase Hooks](https://github.com/csfrequency/react-firebase-hooks)
 - [lodash.debounce](https://www.npmjs.com/package/lodash.debounce)
+- [lodash.kebabcase](https://www.npmjs.com/package/lodash.kebabcase)
 - [React Hot Toast](https://react-hot-toast.com/)
 - [react-markdown](https://github.com/remarkjs/react-markdown)
+- [React Hook Form](https://react-hook-form.com/)
 - [yarn](https://classic.yarnpkg.com/en/)
+
+## Features
+
+- Firebase Authentication
+- Custom usernames
+- Bot-friendly content with SEO
+- Server Side Rendering, Static Side Generation and Incremental Static Regeneration
+- Firestore CRUD and data modeling
+- Client-side form validation
 
 ## Available Scripts
 
