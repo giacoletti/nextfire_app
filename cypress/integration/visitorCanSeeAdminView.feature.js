@@ -81,14 +81,11 @@ describe("A visitor navigating /admin", () => {
       });
 
       it("is expected to see toast message", () => {
-        cy.get(".toast-message").should(
-          "contain.text",
-          "Post created!"
-        );
+        cy.get(".toast-message").should("contain.text", "Post created!");
       });
 
-      it("is expected to navigate to the edit post page", () => {
-        cy.get("[data-cy=edit-header]").should("contain.text", "Edit Post");
+      it("is expected to see post title", () => {
+        cy.get("[data-cy=post-title]").should("contain.text", "My new article");
       });
     });
 
